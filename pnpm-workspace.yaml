@@ -1,0 +1,5 @@
+allowBuilds:
+  esbuild: true
+minimumReleaseAgeExclude:
+  - motion-dom@13.0.0
+  - motion-utils@13.0.0
