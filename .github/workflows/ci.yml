@@ -2,9 +2,13 @@ name: Faraz Sanat CI Workflow
 
 on:
   push:
-    branches: [ main, develop ]
+    branches:
+      - main
+      - develop
   pull_request:
-    branches: [ main, develop ]
+    branches:
+      - main
+      - develop
 
 jobs:
   build-and-test:
@@ -14,11 +18,10 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    # استفاده از نسخه پایدار و رسمی اکشن pnpm
     - name: Setup pnpm
       uses: pnpm/action-setup@v4
       with:
-        version: 11 # هماهنگ با pnpm v11 شما
+        version: 11
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -26,9 +29,8 @@ jobs:
         node-version: 22
         cache: 'pnpm'
 
-    # افزودن flag برای نصب نرم‌تر پکیج‌ها در محیط CI
     - name: Install Dependencies
-    run: pnpm install --no-frozen-lockfile
+      run: pnpm install --no-frozen-lockfile
 
     - name: Build Project
       run: pnpm build
