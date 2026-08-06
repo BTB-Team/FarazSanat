@@ -1,39 +1,34 @@
 name: Faraz Sanat CI Workflow
 
-# مشخص می‌کنیم که این اکشن چه زمانی اجرا شود
 on:
   push:
-    branches: [ main, develop ] # هر زمان که کدی به این دو شاخه پوش شود
+    branches: [ main, develop ]
   pull_request:
-    branches: [ main, develop ] # هر زمان که یک PR به سمت این دو شاخه باز شود
+    branches: [ main, develop ]
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest # استفاده از سرور مجازی لینوکس گیت‌هاب
+    runs-on: ubuntu-latest
 
     steps:
-    # ۱. دانلود کدهای پروژه روی سرور گیت‌هاب
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    # ۲. نصب و راه‌اندازی pnpm روی سرور
+    # استفاده از نسخه پایدار و رسمی اکشن pnpm
     - name: Setup pnpm
-      uses: pnpm/action-setup@v3
+      uses: pnpm/action-setup@v4
       with:
-        version: 11 # هماهنگ با نسخه pnpm سیستم شما
+        version: 11 # هماهنگ با pnpm v11 شما
 
-    # ۳. نصب نود جی‌اس نسخه پایدار (Node 22)
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: 22
-        cache: 'pnpm' # فعال‌سازی کش برای بالا رفتن سرعت بیلد
+        cache: 'pnpm'
 
-    # ۴. نصب تمام وابستگی‌های پروژه (Dependencies)
+    # افزودن flag برای نصب نرم‌تر پکیج‌ها در محیط CI
     - name: Install Dependencies
-      run: pnpm install
+      run: pnpm install --no-frozen-lockfile
 
-    # ۵. تست بیلد پروژه (Vite Build Test)
-    # این دستور مطمئن می‌شود که پروژه بدون هیچ خطای سینتکس یا تایپی کامپایل می‌شود
     - name: Build Project
       run: pnpm build
