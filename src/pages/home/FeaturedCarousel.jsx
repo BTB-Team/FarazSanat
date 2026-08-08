@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LayoutGrid, Weight, MapPin, ArrowLeft, ChevronRight, ChevronLeft } from 'lucide-react';
-import { mockProjects } from '@/data/mockProjects';
+import { mockProjects } from '@/data/mockData';
 
 export default function FeaturedCarousel() {
   // ۱. دریافت پروژه‌های شاخص از فایل دیتای مرجع
@@ -68,7 +68,7 @@ export default function FeaturedCarousel() {
           </AnimatePresence>
 
           {/* کدهای دکمه‌های کنترل کاملاً اختصاصی و راست‌چین شده */}
-          <div className="absolute bottom-6 right-6 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:right-auto md:left-8 z-30 flex gap-3">
+          {/* <div className="absolute bottom-6 right-6 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:right-auto md:left-8 z-30 flex gap-3">
             <button 
               onClick={prevSlide}
               className="p-3 bg-industrialBlack/60 hover:bg-industrialGreen border border-white/10 text-white rounded-full transition-all duration-300 active:scale-95 cursor-pointer shadow-lg"
@@ -81,11 +81,28 @@ export default function FeaturedCarousel() {
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
+          </div> */}
+          <div className="absolute inset-x-4 top-1/2 -translate-y-1/2 md:translate-y-0 md:top-auto md:bottom-6 md:left-8 md:right-auto z-30 flex justify-between md:justify-start md:gap-3 pointer-events-none">
+                    
+            <button 
+              onClick={prevSlide}
+              // کلاس pointer-events-auto اجازه می‌دهد دکمه‌ها با وجود نامرئی بودن کانتینر مادر، کلیک‌شونده باقی بمانند
+              className="p-3 bg-industrialBlack/60 hover:bg-industrialGreen border border-white/10 text-white rounded-full transition-all duration-300 active:scale-95 cursor-pointer shadow-lg pointer-events-auto"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+                    
+            <button 
+              onClick={nextSlide}
+              className="p-3 bg-industrialBlack/60 hover:bg-industrialGreen border border-white/10 text-white rounded-full transition-all duration-300 active:scale-95 cursor-pointer shadow-lg pointer-events-auto"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+                    
           </div>
 
           {/* کارت اطلاعات شیشه دودی لوکس غوطه‌ور روی تصویر */}
-          <div className="absolute right-0 bottom-0 md:top-0 md:bottom-0 md:my-auto md:h-fit w-full md:w-[450px] bg-industrialBlack/20 md:bg-[#0e131f]/40 backdrop-blur-md border-t md:border-t-0 md:border-r-4 border-industrialGreen p-6 md:p-8 text-white text-right flex flex-col space-y-4 md:mr-8 md:rounded-xl shadow-2xl z-20">
-            
+          <div className="absolute right-0 bottom-0 md:top-0 md:bottom-0 md:my-auto md:h-fit w-full md:w-[450px] bg-industrialBlack/20 md:bg-[#0e131f]/40 backdrop-blur-md border-t md:border-t-0 md:border-r-4 border-industrialGreen p-6 md:p-8 text-white text-right flex flex-col space-y-4 md:mr-8 md:rounded-xl shadow-2xl z-20">          
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
