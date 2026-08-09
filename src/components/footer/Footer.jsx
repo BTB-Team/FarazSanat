@@ -84,8 +84,8 @@ export default function Footer() {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="font-semibold text-white text-xs">موقعیت کارخانه:</span>
-                  <span className="text-slate-400 text-xs mt-0.5 leading-relaxed">افغانستان، کابل، پارک صنعتی کوتل تخت</span>
+                  <span className="font-semibold text-white text-xs"> آدرس دفتر مرکزی:</span>
+                  <span className="text-slate-400 text-xs mt-0.5 leading-relaxed">ناحیه 5 سرک کمپنی بالاتر از پل کمپنی قلعه حیدر خان، کابل، افغانستان </span>
                 </div>
               </li>
               {/* تلفن */}
@@ -95,7 +95,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col">
                   <span className="font-semibold text-white text-xs">ارتباط مستقیم بخش مهندسی:</span>
-                  <a href="tel:+93799123456" className="text-slate-400 text-xs mt-0.5 hover:text-industrialGreen transition-colors tracking-wide">۰۷۹۹۱۲۳۴۵۶</a>
+                  <a href="tel:+93799123456" className="text-slate-400 text-xs mt-0.5 hover:text-industrialGreen transition-colors tracking-wide" dir="ltr">+۹۳۷۹۹۸۵۹۵۵۷</a>
                 </div>
               </li>
               {/* ایمیل */}
@@ -105,7 +105,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col">
                   <span className="font-semibold text-white text-xs">مکاتبات اداری و رسمی:</span>
-                  <a href="mailto:info@farazsanat.com" className="text-slate-400 text-xs mt-0.5 hover:text-industrialGreen transition-colors tracking-wide">info@farazsanat.com</a>
+                  <a href="mailto:info@farazsanat.com" className="text-slate-400 text-xs mt-0.5 hover:text-industrialGreen transition-colors tracking-wide">Abbasax19@gmail.com</a>
                 </div>
               </li>
             </ul>
