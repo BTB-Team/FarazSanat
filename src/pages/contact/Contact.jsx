@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import ContactInfo from './components/ContactInfo';
 import ContactForm from './components/ContactForm';
 import GoogleMap from './components/GoogleMap';
-import Footer from '@/components/footer/Footer';
 
 export default function Contact() {
   return (
