@@ -1,10 +1,19 @@
-import React from 'react';
+import AboutHero from './AboutHero';
+import Leadership from './Leadership';
+import VisionMission from './VisionMission';
+import CoreValues from './CoreValues';
+import FactoryMachinery from './FactoryMachinery';
+import CTA from '@/components/cta/CTA'; 
 
 export default function About() {
   return (
-    <div className="page-container">
-      <h1 className="text-2xl md:text-3xl font-bold mb-4">درباره ما</h1>
-      <p className="text-base text-slate-600">معرفی تاریخچه، اهداف و ماشین‌آلات شرکت فراز صنعت.</p>
+    <div className="w-full bg-industrialGray overflow-hidden">
+      <AboutHero />
+      <Leadership/>
+      <VisionMission/>
+      <CoreValues />
+      <FactoryMachinery/>
+      <CTA /> 
     </div>
   );
 }

@@ -1,73 +1,18 @@
 // ۱. ایمپورت کردن تصاویر محلی از پوشه assets/images
-import Hanger1 from '@/assets/images/Hero-3.jpg'; // نام دقیق عکس خود را بنویسید
+import Hanger1 from '@/assets/images/Hero-3.jpg'; 
 import Hanger2 from '@/assets/images/Hero.jpg';
-import Hanger3 from '@/assets/images/Hero-2.jpg';
+// import Hanger3 from '@/assets/images/Hero-2.jpg';
 import Hanger4 from '@/assets/images/hero-4.jpg';
-
-// export const mockProjects = [
-//   {
-//     id: "proj-101",
-//     title: "هنگر غول‌پیکر ذخیره‌سازی مجمع صنعتی لاجورد",
-//     category: "industrial",
-//     location: "شهرک صنعتی هرات",
-//     completionYear: "۱۴۰۴",
-//     // ۲. جایگزین کردن متغیر عکس به جای آدرس متنی انترنت
-//     mainImage: Hanger1, 
-//     isFeatured: true,
-//     specifications: {
-//       span: "۴۲ متر (دهانه آزاد بدون ستون وسط)",
-//       height: "۹.۵ متر (ارتفاع مفید ستون‌ها)",
-//       length: "۱۲۰ متر",
-//       steelWeight: "۱۶۰ تُن فولاد پیش‌ساخته",
-//       roofCover: "ساندویچ پنل ۵ سانتی با عایق پولی‌اوریتان",
-//       steelType: "فولاد معیاری ST37-2 کارخانه ذوب‌آهن"
-//     },
-//     description: "این پروژه به عنوان یکی از بزرگترین هنگرهای ذخیره‌سازی مجمع لاجورد طراحی شده است..."
-//   },
-//   {
-//     id: "proj-102",
-//     title: "سوله تولیدی و معیاری شرکت لبنیات پامیر",
-//     category: "industrial",
-//     location: "پلچرخی، کابل",
-//     completionYear: "۱۴۰۳",
-//     mainImage: Hanger2, // 👈 متغیر عکس دوم
-//     isFeatured: true,
-//     specifications: {
-//       span: "۳۶ متر",
-//       height: "۸ متر",
-//       length: "۸۵ متر",
-//       steelWeight: "۹۵ تُن فولاد",
-//       roofCover: "ورق گالوانیزه رنگی همراه با پشم شیشه",
-//       steelType: "ST37"
-//     },
-//     description: "سوله صنعتی شرکت لبنیات پامیر مطابق با آخرین استانداردهای بهداشتی..."
-//   },
-//   {
-//     id: "proj-103",
-//     title: "سالن سرپوشیده و استندینگ مجمع ورزشی آریانا",
-//     category: "commercial",
-//     location: "مزار شریف، بلخ",
-//     completionYear: "۱۴۰۴",
-//     mainImage: Hanger3, // 👈 متغیر عکس سوم
-//     isFeatured: true,
-//     specifications: {
-//       span: "۵۰ متر (سقف قوسی بدون ستون مزاحم)",
-//       height: "۱۲ متر (سقف کماندویی مجهز)",
-//       length: "۶۰ متر",
-//       steelWeight: "۲۱۰ تُن فولاد سنگین",
-//       roofCover: "ورق دبل گالوانیزه مجهز به سیستم سقف قوسی K-Span",
-//       steelType: "فولاد مقاومت بالا ST52"
-//     },
-//     description: "این ابر سازه با دهانه آزاد ۵۰ متری بدون هیچ ستون میانی..."
-//   }
-// ];
-// src/data/mockData.js
 
 export const mockProjects = [
   {
     id: "proj-101",
     title: "هنگر غول‌پیکر ذخیره‌سازی مجمع صنعتی لاجورد",
-    // ... بقیه فیلدها بدون تغییر ...
+     category: "industrial",
+     location: "شهرک صنعتی هرات",
+     completionYear: "۱۴۰۴",
+     mainImage: Hanger1, 
+     isFeatured: true,
     specifications: {
       span: "۴۲ متر (دهانه آزاد بدون ستون وسط)",
       height: "۹.۵ متر (ارتفاع مفید ستون‌ها)",
@@ -85,7 +30,7 @@ export const mockProjects = [
       location: "پلچرخی، کابل",
       completionYear: "۱۴۰۳",
       // 🛑 اعمال همان متد برای عکس دوم (آدرس‌دهی بر اساس موقعیت فایل mockData نسبت به تصاویر)
-      mainImage: new URL('../assets/images/Hero.jpg', import.meta.url).href,
+      mainImage: new URL(Hanger2, import.meta.url).href,
       isFeatured: true,
       specifications: {
         span: "۳۶ متر",
@@ -104,7 +49,7 @@ export const mockProjects = [
       location: "مزار شریف، بلخ",
       completionYear: "۱۴۰۴",
       // 🛑 اعمال متد برای عکس سوم
-      mainImage: new URL('../assets/images/Hero-3.jpg', import.meta.url).href,
+      mainImage: new URL(Hanger4, import.meta.url).href,
       isFeatured: true,
       specifications: {
         span: "۵۰ متر (سقف قوسی بدون ستون مزاحم)",
@@ -146,7 +91,8 @@ export const mockFaqs = [
     answer: "بلی، تیم مهندسی متخصص و گروه‌های نصب فنی ما قابلیت پوشش سراسری و اجرای پروژه‌های هنگرسازی و فلزکاری را در تمام ولایات و نقاط کشور دارا می‌باشند."
   }
 ];
-// آرایه تخصصی خدمات ۳ ستونه شرکت فراز صنعت
+
+// آرایه خدمات شرکت فراز صنعت
 export const mockServices = [
   {
     id: 1,
@@ -170,3 +116,35 @@ export const mockServices = [
     description: "انتقال منظم قطعات پیش‌ساخته به محل پروژه و مونتاژ سریع، دقیق و معیاری اسکلت فلزی هنگر توسط تیم‌های نصب مجرب با استفاده از تجهیزات و جرثقیل‌های سنگین با رعایت کامل اصول ایمنی (HSE)."
   }
 ];
+
+// لست جامع و واقعی ۱۹ دستگاه استراتژیک فابریکه فراز صنعت بر پایه سند رسمی شرکت
+export const mockMachinery = [
+  { id: 1, title: "دستگاه قیچی کلان ۶ متره", iconName: "Scissors", description: "با ظرفیت برش ورق‌های فولادی ضخیم صنعتی طویل به ارزش مجموعی ۱۱,۴۵۰,۰۰۰ افغانی." },
+  { id: 2, title: "دستگاه قیچی ۲.۵ متره هیدرولیک", iconName: "Scissors", description: "جهت برش و سایز زدن سریع ورق‌های فولادی اتصالات و پلیت‌های سازه در ضخامت‌های مختلف." },
+  { id: 3, title: "دستگاه پاینچ (Punching Machine)", iconName: "Cpu", description: "دستگاه پانچ و سوراخ‌کاری صنعتی اتوماتیک جهت تعبیه دقیق محل پیچ و مهره‌ها." },
+  { id: 4, title: "دستگاه پرس کلان هیدرولیکی", iconName: "Layers", description: "جهت فارم‌دهی، خم‌کاری سنگین و فرم‌دهی قطعات ضخیم فولادی تحت فشار بالا." },
+  { id: 5, title: "سیستم‌های جوشکاری پیشرفته CO2", iconName: "Flame", description: "جوشکاری تحت گاز محافظ جهت اتصال فوق‌العاده مقاوم، یکدست و بدون سرباره قطعات آهن." },
+  { id: 6, title: "دستگاه پلسما (Plasma Cutting)", iconName: "Zap", description: "برش حرارتی مجهز با سرعت و کیفیت بالا برای آلیاژها و ورق‌های سخت فلزی." },
+  { id: 7, title: "دستگاه زیگزال صنعتی سقف", iconName: "Activity", description: "تولید تیرچه‌ها و خرپاهای زیگزال با هندسه دقیق جهت پوشش مقاوم سقف هنگرها." },
+  { id: 8, title: "دستگاه‌های مجهز جوش و رکتیفایر", iconName: "Flame", description: "سیستم‌های جوشکاری برق سنگین صنعتی برای اتصالات نفوذی و پایداری کامل سازه." },
+  { id: 9, title: "دستگاه برمه کلان ستونی", iconName: "Disc", description: "سوراخ‌کاری دقیق اتصالات ضخیم فلزی با مته‌های سنگین کارگاهی بدون خطا." },
+  { id: 10, title: "کمپرسور هوا سنگین صنعتی", iconName: "Wind", description: "تامین هوای فشرده مورد نیاز ابزارآلات کارگاهی، دستگاه‌های برش و صالون رنگ‌آمیزی." },
+  { id: 11, title: "کرین (جرثقیل) سقفی سنگین", iconName: "ArrowUpToLine", description: "جهت جابجایی تلاقی آهن‌آلات و مونتاژ قطعات غول‌پیکر پیش‌ساخته در صالون تولید." },
+  { id: 12, title: "دستگاه میلگرد بر هیدرولیک", iconName: "Scissors", description: "برش سریع و معیاری میلگردها و شفت‌های فولادی مورد نیاز فونداسیون و اسکلت فلزی." },
+  { id: 13, title: "لفت ترک (Forklift) سنگین کارخانه", iconName: "Truck", description: "تجهیزات چرخ‌دار جهت بارگیری، تخلیه و جابجایی دپوی ورق‌ها و تیرآهن‌ها در محوطه کارخانه." },
+  { id: 14, title: "جنراتور کلان اضطراری کارخانه", iconName: "ToggleRight", description: "تامین برق صنعتی مورد نیاز ماشین‌آلات و خط تولید کارخانه در زمان پرچوی برق." },
+  { id: 15, title: "دستگاه خم س (C-Profile Bending)", iconName: "Columns", description: "فرمینگ و خم‌کاری ورق‌ها جهت تولید پرلین‌ها و زی‌های C شکل پوشش دیوار و سقف." },
+  { id: 16, title: "دستگاه پرس فرم‌دهی قطعات", id_ref: 16, iconName: "Layers", description: "پرس و قالب‌ریزی قطعات فلزی فرعی، کادرهای وزنه تعادل و لفت‌های ساختمانی." },
+  { id: 17, title: "دستگاه برش پیشرفته CNC", iconName: "Cpu", description: "برش کامپیوتری فوق‌العاده دقیق و بدون خطای ورق‌های فولادی بر اساس نقشه‌های AutoCAD." },
+  { id: 18, title: "دستگاه برمه کلان شعاعی (رادیال)", iconName: "Disc", description: "سیستم برمه بازویی پیشرفته جهت سوراخ‌کاری صفحات ضخیم بیس‌پلیت در شعاع‌های مختلف." },
+  { id: 19, title: "دستگاه برش لیزر (Laser Cutting)", iconName: "Zap", description: "تکنولوژی مجهز برش لیزری آهن با بالاترین پرستیژ، ظرافت صدم‌ملی‌متری و بدون نیاز به تراش‌کاری." }
+];
+// داده‌های رسمی و حقوقی مدیریت و رهبری فابریکه فراز صنعت بر پایه سند رسمی وزارت
+export const mockLeadership = {
+  name: "سید محمد علوی",
+  role: "رئیس عمومی و مالک ۱۰۰٪ اسهام فابریکه فراز صنعت",
+  avatar: new URL('../assets/images/ceo-avatar.webp', import.meta.url).href, 
+  message: "فابریکه هنگرسازی و فلزکاری فراز صنعت از سال ۱۳۹۲ با هدف سهم‌گیری فعال در توسعه زیربناهای صنعتی کشور و خودکفایی در بخش عمران سنگین آغاز به کار نمود. تعهد ما همواره بر این بوده است تا با تکیه بر دانش مهندسی مدرن، محاسبات دقیق تخنیکی و استفاده از ماشین‌آلات مجهز پیش‌ساخته، سازه‌هایی با بالاترین ضریب ایمنی و کیفیت عالی را به مشتریان محترم خویش تحویل دهیم. ما افق روشنِ آینده را در پارک صنعتی کوتل تخت زمین با اشتغال‌زایی وسیع برای جوانان و هموطنان عزیز و بومی‌سازی کامل این صنعت در کشور عزیز مان رقم خواهیم زد."
+};
+
+
