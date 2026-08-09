@@ -1,51 +1,42 @@
-import React from "react";
-import { motion } from "framer-motion";
-import ContactInfo from "./components/ContactInfo";
-import ContactForm from "./components/ContactForm";
-import GoogleMap from "./components/GoogleMap";
+import { motion } from 'framer-motion';
+import ContactInfo from './components/ContactInfo';
+import ContactForm from './components/ContactForm';
+import GoogleMap from './components/GoogleMap';
+import Footer from '@/components/footer/Footer';
 
 export default function Contact() {
   return (
-    <div>
-      {/* پس‌زمینه خط‌کشی‌شده به سبک نقشه‌های مهندسی — جایگزین عکس زمینه، هم‌راستا با برند صنعتی شرکت */}
-      <section
-        className="bg-industrialGray
-                   bg-[linear-gradient(to_right,rgba(11,11,11,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(11,11,11,0.05)_1px,transparent_1px)]
-                   bg-[size:32px_32px]"
+    <div className="page-container">
+      {/* Hero: centered badge + heading, matching the reference's centered layout */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-2xl mx-auto text-center mb-10"
       >
-        <div className="page-container pb-44 sm:pb-52 lg:pb-40">
-          {/* Hero */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-10 max-w-xl"
-          >
-            <p className="font-yekan text-sm font-semibold text-industrialGreen tracking-wide mb-2">
-              فراز صنعت
-            </p>
-            <h1 className="font-Estedad text-3xl md:text-4xl font-extrabold text-industrialBlack">
-              با ما در تماس باشید
-            </h1>
-            <p className="mt-3 text-base text-slate-600">
-              برای مشاوره، درخواست پروژه یا هر پرسش دیگر، فرم زیر را تکمیل کنید
-              یا مستقیم تماس بگیرید.
-            </p>
-          </motion.div>
+        <span className="inline-block text-xs font-semibold tracking-wide text-industrialGreen border border-industrialGreen/30 bg-industrialGreen/5 rounded-full px-4 py-1.5 mb-4">
+          تماس با ما
+        </span>
+        <h1 className="font-Estedad text-3xl md:text-4xl font-extrabold text-industrialBlack">
+          با ما در تماس باشید، در خدمت شما هستیم
+        </h1>
+        <p className="mt-3 text-base text-slate-600">
+          برای مشاوره، درخواست پروژه یا هر پرسش دیگر، فرم زیر را تکمیل کنید یا مستقیم تماس بگیرید.
+        </p>
+      </motion.div>
 
-          {/* Overlapping cards: form (light) is the anchor; info (dark) climbs onto its corner on desktop */}
-          <div className="relative lg:max-w-3xl">
-            <ContactForm />
-            <div className="mt-6 lg:mt-0 lg:absolute lg:bottom-[-2.5rem] lg:end-[-2.5rem] lg:w-[62%]">
-              <ContactInfo />
-            </div>
-          </div>
+      {/* Three info cards */}
+      <div className="mb-6">
+        <ContactInfo />
+      </div>
+
+      {/* One unified card: map + form side by side (mirrored for RTL — map renders on the
+          right, form on the left, matching the reference's reading order) */}
+      <div className="bg-white rounded-2xl shadow-sm shadow-slate-900/5 border border-slate-100 p-4 sm:p-6">
+        <div className="grid lg:grid-cols-2 gap-6 items-stretch">
+          <GoogleMap />
+          <ContactForm />
         </div>
-      </section>
-
-      {/* Map */}
-      <div className="page-container -mt-24 sm:-mt-28 lg:mt-0 relative z-10 pb-16">
-        <GoogleMap />
       </div>
     </div>
   );

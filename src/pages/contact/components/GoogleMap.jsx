@@ -14,14 +14,14 @@ export default function GoogleMap() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.5, delay: 0.15 }}
-      className="rounded-2xl overflow-hidden shadow-xl shadow-slate-900/5"
+      className="rounded-xl overflow-hidden h-64 sm:h-full min-h-[280px]"
     >
       <iframe
         title="موقعیت کارخانه فراز صنعت روی نقشه"
         src={MAP_EMBED_SRC}
         width="100%"
-        height="360"
-        style={{ border: 0 }}
+        height="100%"
+        style={{ border: 0, display: 'block' }}
         allowFullScreen=""
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"

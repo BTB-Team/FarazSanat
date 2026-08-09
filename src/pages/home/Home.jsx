@@ -1,3 +1,4 @@
+
 export default function Home() {
   return (
     <div className="page-container">
@@ -8,5 +9,6 @@ export default function Home() {
         This is the home page of the Faraz Sanat website. Explore our products and services.
       </p>
     </div>
+
   );
 }
