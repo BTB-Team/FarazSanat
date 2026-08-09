@@ -5,7 +5,7 @@ import { ArrowLeft, PhoneCall } from 'lucide-react';
 export default function CTA() {
   return (
     // سکشن اصلی با پس‌زمینه خاکستری روشن برای هماهنگی با FAQ قبلی
-    <section className="w-full bg-industrialGray py-16 lg:py-20 select-none font-yekan border-t border-slate-200 relative overflow-hidden">
+    <section className="w-full bg-white py-16 lg:py-20 select-none font-yekan border-t border-slate-200 relative overflow-hidden">
       
       {/* لایه محو نوری سفید در پس‌زمینه جهت افزایش بازتاب افکت شیشه */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-white/20 blur-[100px] rounded-full pointer-events-none" />
