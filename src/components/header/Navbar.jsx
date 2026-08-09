@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Phone, ArrowLeftRight, Menu, X } from 'lucide-react';
 import FarazSanatLogo from '@/assets/logo.webp'; 
@@ -70,7 +70,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col items-start text-xs ">
               <span className="text-slate-400">ارتباط مستقیم:</span>
-              <span className=" text-industrialBlack ">۰۷۷۳۵۵۳۳۱۳</span>
+              <span className=" text-industrialBlack" dir="ltr">+۹۳۷۹۹۸۵۹۵۵۷</span>
             </div>
           </a>
 
@@ -117,7 +117,7 @@ export default function Navbar() {
           <div className="pt-4 border-t border-slate-200 flex flex-col gap-3">
             <a href="tel:+93773553313" className="flex items-center gap-3 text-slate-600 py-2">
               <Phone className="w-5 h-5 text-industrialGreen" />
-              <span className="text-sm  text-industrialBlack">۰۷۷۳۵۵۳۳۱۳</span>
+              <span className="text-sm  text-industrialBlack" dir="ltr">+۹۳۷۹۹۸۵۹۵۵۷</span>
             </a>
             <Link 
               to="/contact"
