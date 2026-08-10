@@ -149,59 +149,19 @@ export const mockLeadership = {
 
 // دیتای جامع گالری تصاویر واقعی فابریکه فراز صنعت
 export const mockGallery = [
-  {
-    id: "gal-1",
-    category: "factory", // factory (کارخانه)، installation (نصب ساحه)، completed (پروژه‌ها)
-    title: "صالون مجهز ۱,۶۰۰ متری تولید اسکلت فلزی",
-    image: new URL('../assets/images/gallery/factory-1.jpg', import.meta.url).href
-  },
-  {
-    id: "gal-2",
-    category: "factory",
-    title: "برش دقیق ورق‌های ستون با دستگاه CNC پلازما",
-    image: new URL('../assets/images/gallery/factory-2.jpg', import.meta.url).href
-  },
-  {
-    id: "gal-3",
-    category: "installation",
-    title: "روند برپایی و نصب ستون‌های هنگر با کرین سنگین",
-    image: new URL('../assets/images/gallery/install-1.jpg', import.meta.url).href
-  },
-  {
-    id: "gal-4",
-    category: "completed",
-    title: "نمای نهایی هنگر تحویل داده شده مجمع لاجورد هرات",
-    image: new URL('../assets/images/gallery/complete-1.jpg', import.meta.url).href
-  },
-  {
-    id: "gal-5",
-    category: "factory",
-    title: "جوشکاری اتوماتیک زیرپودری تیرهای سنگین H",
-    image: new URL('../assets/images/gallery/factory-3.jpg', import.meta.url).href
-  },
-  {
-    id: "gal-6",
-    category: "installation",
-    title: "مونتاژ پرلین‌های زغالی سقف در سایت ساختمانی",
-    image: new URL('../assets/images/gallery/install-2.jpg', import.meta.url).href
-  },
-  {
-    id: "gal-7",
-    category: "factory",
-    title: "صالون رنگ‌آمیزی مجهز و زنگ‌زدایی قطعات آهن",
-    image: new URL('../assets/images/gallery/factory-4.jpg', import.meta.url).href
-  },
-  {
-    id: "gal-8",
-    category: "completed",
-    title: "سوله معیاری خط تولید شرکت لبنیات پامیر کابل",
-    image: new URL('../assets/images/gallery/complete-2.jpg', import.meta.url).href
-  },
-  {
-    id: "gal-9",
-    category: "installation",
-    title: "تکمیل اسکلت فلزی دهانه آزاد ۵۰ متری مزار شریف",
-    image: new URL('../assets/images/gallery/install-3.jpg', import.meta.url).href
-  }
+  { id: "gal-1", category: "completed", title: "نمای مدرن سوله تحویل داده شده فراز صنعت", image: new URL('@/assets/images/hero-bg.jpg', import.meta.url).href },
+  { id: "gal-2", category: "factory", title: "صالون مسقف و مجهز ۱,۶۰۰ متری تولید اسکلت فلزی", image: new URL('../assets/images/hero-1.jpg', import.meta.url).href },
+  { id: "gal-3", category: "installation", title: "روند برپایی و نصب ستون‌های غول‌پیکر با کرین", image: new URL('../assets/images/Hero-2.jpg', import.meta.url).href }, // دقت به H بزرگ در نام فایل
+  { id: "gal-4", category: "completed", title: "اجرای پوشش سقف و عایق‌بندی مجهز هنگر", image: new URL('../assets/images/Hero-3.jpg', import.meta.url).href },
+  { id: "gal-5", category: "factory", title: "خط تولید و مونتاژ قطعات پیش‌ساخته در کارخانه", image: new URL('../assets/images/hero-4.jpg', import.meta.url).href },
+  { id: "gal-6", category: "installation", title: "ساخت اسکلت فلزی سنگین و مهندسی‌شده", image: new URL('../assets/images/hero-5.jpg', import.meta.url).href },
+  { id: "gal-7", category: "factory", title: "طراحی فضاکار داخلی سوله صنعتی", image: new URL('../assets/images/Hero.jpg', import.meta.url).href },
+  { id: "gal-8", category: "completed", title: "هنگر ذخیره‌سازی استراتژیک غلات و گندم", image: new URL('../assets/images/hero-bg-2.jpg', import.meta.url).href },
+  { id: "gal-9", category: "installation", title: "محاسبات فنی بارهای باد و زلزله در ساحه", image: new URL('../assets/images/hero-bg-3.jpg', import.meta.url).href },
+  { id: "gal-10", category: "installation", title: "محاسبات فنی بارهای باد و زلزله در ساحه", image: new URL('../assets/images/hero-bg-1.jpg', import.meta.url).href },
+  { id: "gal-11", category: "installation", title: "محاسبات فنی بارهای باد و زلزله در ساحه", image: new URL('../assets/images/hero.jpg', import.meta.url).href },
+  { id: "gal-12", category: "installation", title: "محاسبات فنی بارهای باد و زلزله در ساحه", image: new URL('../assets/images/hero-bg-4.jpg', import.meta.url).href },
+  { id: "gal-13", category: "installation", title: "محاسبات فنی بارهای باد و زلزله در ساحه", image: new URL('../assets/images/hero-bg-3.jpg', import.meta.url).href },
 ];
+
 
