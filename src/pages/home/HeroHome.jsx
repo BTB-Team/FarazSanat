@@ -182,7 +182,7 @@ export default function HeroHome() {
               </div>
               <div className="flex flex-col">
                 <span className="text-4xl lg:text-5xl font-black font-estedad text-white tracking-wide">
-                  ۱۲۰+ پروژه
+                  ۵۰۰+ پروژه
                 </span>
                 <span className="text-sm lg:text-base text-slate-300 mt-1 font-light">
                   هنگر و سوله تحویل داده شده
@@ -200,7 +200,7 @@ export default function HeroHome() {
               </div>
               <div className="flex flex-col">
                 <span className="text-4xl lg:text-5xl font-black font-estedad text-white tracking-wide">
-                  ۴۰+ تُن
+                  ۱۰ الی ۱۵ تُن
                 </span>
                 <span className="text-sm lg:text-base text-slate-300 mt-1 font-light">
                   ظرفیت تولید روزانه کارخانه
