@@ -9,8 +9,9 @@ export default function Navbar() {
   const menuItems = [
     { title: 'صفحه اصلی', path: '/' },
     { title: 'خدمات ما', path: '/services' },
-    { title: 'کاتالوگ پروژه‌ها', path: '/projects' },
+    { title: 'پروژه‌ها', path: '/projects' },
     { title: 'درباره کارخانه', path: '/about' },
+    { title: 'گالری', path: '/gallery' },
   ];
 
   return (
@@ -79,7 +80,7 @@ export default function Navbar() {
             to="/contact" 
             className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-industrialGreen hover:bg-industrialGreen/90 text-white rounded-lg text-sm  shadow-md shadow-industrialGreen/10 hover:shadow-industrialGreen/30 hover:-translate-y-0.5 transition-all duration-300 group"
           >
-            <span>مشاوره فنی</span>
+            <span>تماس با ما</span>
             <ArrowLeftRight className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1" />
           </Link>
 
@@ -124,7 +125,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="w-full bg-industrialGreen text-white text-center py-3 rounded-lg text-sm block"
             >
-              درخواست مشاوره فنی
+                تماس با ما
             </Link>
           </div>
         </div>
