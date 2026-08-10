@@ -147,4 +147,61 @@ export const mockLeadership = {
   message: "فابریکه هنگرسازی و فلزکاری فراز صنعت از سال ۱۳۹۲ با هدف سهم‌گیری فعال در توسعه زیربناهای صنعتی کشور و خودکفایی در بخش عمران سنگین آغاز به کار نمود. تعهد ما همواره بر این بوده است تا با تکیه بر دانش مهندسی مدرن، محاسبات دقیق تخنیکی و استفاده از ماشین‌آلات مجهز پیش‌ساخته، سازه‌هایی با بالاترین ضریب ایمنی و کیفیت عالی را به مشتریان محترم خویش تحویل دهیم. ما افق روشنِ آینده را در پارک صنعتی کوتل تخت زمین با اشتغال‌زایی وسیع برای جوانان و هموطنان عزیز و بومی‌سازی کامل این صنعت در کشور عزیز مان رقم خواهیم زد."
 };
 
+// دیتای جامع گالری تصاویر واقعی فابریکه فراز صنعت
+export const mockGallery = [
+  {
+    id: "gal-1",
+    category: "factory", // factory (کارخانه)، installation (نصب ساحه)، completed (پروژه‌ها)
+    title: "صالون مجهز ۱,۶۰۰ متری تولید اسکلت فلزی",
+    image: new URL('../assets/images/gallery/factory-1.jpg', import.meta.url).href
+  },
+  {
+    id: "gal-2",
+    category: "factory",
+    title: "برش دقیق ورق‌های ستون با دستگاه CNC پلازما",
+    image: new URL('../assets/images/gallery/factory-2.jpg', import.meta.url).href
+  },
+  {
+    id: "gal-3",
+    category: "installation",
+    title: "روند برپایی و نصب ستون‌های هنگر با کرین سنگین",
+    image: new URL('../assets/images/gallery/install-1.jpg', import.meta.url).href
+  },
+  {
+    id: "gal-4",
+    category: "completed",
+    title: "نمای نهایی هنگر تحویل داده شده مجمع لاجورد هرات",
+    image: new URL('../assets/images/gallery/complete-1.jpg', import.meta.url).href
+  },
+  {
+    id: "gal-5",
+    category: "factory",
+    title: "جوشکاری اتوماتیک زیرپودری تیرهای سنگین H",
+    image: new URL('../assets/images/gallery/factory-3.jpg', import.meta.url).href
+  },
+  {
+    id: "gal-6",
+    category: "installation",
+    title: "مونتاژ پرلین‌های زغالی سقف در سایت ساختمانی",
+    image: new URL('../assets/images/gallery/install-2.jpg', import.meta.url).href
+  },
+  {
+    id: "gal-7",
+    category: "factory",
+    title: "صالون رنگ‌آمیزی مجهز و زنگ‌زدایی قطعات آهن",
+    image: new URL('../assets/images/gallery/factory-4.jpg', import.meta.url).href
+  },
+  {
+    id: "gal-8",
+    category: "completed",
+    title: "سوله معیاری خط تولید شرکت لبنیات پامیر کابل",
+    image: new URL('../assets/images/gallery/complete-2.jpg', import.meta.url).href
+  },
+  {
+    id: "gal-9",
+    category: "installation",
+    title: "تکمیل اسکلت فلزی دهانه آزاد ۵۰ متری مزار شریف",
+    image: new URL('../assets/images/gallery/install-3.jpg', import.meta.url).href
+  }
+];
 
