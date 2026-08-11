@@ -164,4 +164,28 @@ export const mockGallery = [
   { id: "gal-13", category: "installation", title: "محاسبات فنی بارهای باد و زلزله در ساحه", image: new URL('../assets/images/hero-bg-3.jpg', import.meta.url).href },
 ];
 
+// دیتای کادر فنی و انجینیران ارشد فابریکه فراز صنعت
+export const mockTeam = [
+  {
+    id: "team-1",
+    name: "انجنیر احمد جاوید صدیقی",
+    role: "انجنیر ارشد محاسبات و تحلیل سازه",
+    specialty: "متخصص محاسبات بارهای برف و زلزله در SAP2000 و ETABS",
+    image: new URL('../assets/images/ceo-avatar.webp', import.meta.url).href
+  },
+  {
+    id: "team-2",
+    name: "انجنیر محمد رفیع علوی",
+    role: "مدیر فنی فابریکه و نقشه‌های شاپ",
+    specialty: "متخصص مدل‌سازی اتصالات پیچ و مهره‌ای در Tekla Structures",
+    image: new URL('../assets/images/ceo-avatar.webp', import.meta.url).href
+  },
+  {
+    id: "team-3",
+    name: "انجنیر ساحل رحیمی",
+    role: "سرپرست کنترل کیفیت و نصب ساحه",
+    specialty: "ناظر جوشکاری زیرپودری در فابریکه و مونتاژ اسکلت فلزی با کرین",
+    image: new URL('../assets/images/ceo-avatar.webp', import.meta.url).href
+  }
+];
 

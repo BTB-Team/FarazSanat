@@ -1,10 +1,11 @@
 import AboutHero from './AboutHero';
 import Introduction from '@/pages/home/Introduction';
 import Leadership from './Leadership';
+import TeamSection from './TeamSection';
 import VisionMission from './VisionMission';
 import CoreValues from './CoreValues';
 import FactoryMachinery from './FactoryMachinery';
-import CTA from '@/components/cta/CTA'; 
+import CtaBlack from '@/components/cta/CtaBlack'; 
 
 export default function About() {
   return (
@@ -12,10 +13,11 @@ export default function About() {
       <AboutHero />
       <Introduction/>
       <Leadership/>
+      <TeamSection />
       <VisionMission/>
       <CoreValues />
       <FactoryMachinery/>
-      <CTA /> 
+      <CtaBlack/> 
     </div>
   );
 }

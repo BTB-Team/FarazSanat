@@ -67,10 +67,10 @@ export default function Portfolio() {
         <img
           src={ProjectsHero}
           alt="پروژه‌های شرکت صنعتی فراز"
-          className="absolute inset-0 h-full w-full object-cover opacity-40"
+          className="absolute inset-0 h-full w-full object-cover opacity-60"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-l from-[#07100f]/95 via-[#07100f]/70 to-[#075c3d]/70" />
+        <div className="absolute inset-0 bg-gradient-to-l from-[#07100f]/65 via-[#07100f]/50 to-[#075c3d]/50" />
 
         <div className="relative mx-auto flex items-center   min-h-[330px]  max-w-7xl  px-6 py-16">
           <div className="ml-auto max-w-xl  text-white ">

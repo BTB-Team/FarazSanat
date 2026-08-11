@@ -1,45 +1,67 @@
 import { motion } from 'framer-motion';
-import { Factory } from 'lucide-react';
-import AboutBg from '@/assets/images/hero-bg.jpg';
+import { Link } from 'react-router-dom';
+// تصویر پس‌زمینه عریض کارخانه را در این مسیر ست کنید
+import AboutBg from '@/assets/images/hero-bg.jpg'; 
 
 export default function AboutHero() {
   return (
-    // بنر با ارتفاع فشرده ۳۰ درصد مانیتور و پس‌زمینه تیره عمیق صنعتی
-    <section className="relative min-h-[30vh] md:h-[280px] flex items-center bg-[#0a0d14] text-white overflow-hidden select-none font-yekan border-b border-white/5">
+    // 🚀 هیروی کشیده و باابهت کاملاً هماهنگ با صفحه پروژه‌ها (RTL دری)
+    <section className="relative w-full bg-industrialBlack text-white overflow-hidden select-none font-yekan border-b border-white/5 py-24 sm:py-28 lg:py-32">
       
-      {/* ۱. لایه تصویر پس‌زمینه محو (Opacity 20%) جهت زنده کردن بافت آهن و صنعت */}
+      {/* 🛠️ اصلاح اصلی ۱: تصویر پس‌زمینه با اوورلی (Overlay) بسیار روشن‌تر و شفاف‌تر */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="w-full h-full bg-cover bg-center bg-no-repeat opacity-20"
+          className="w-full h-full bg-cover bg-center bg-no-repeat opacity-60 transition-transform duration-[2000ms] hover:scale-105"
           style={{ backgroundImage: `url(${AboutBg})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d14] via-transparent to-[#0a0d14]/70" />
+        {/* لایه شفاف تیره ملایم‌تر (۴۰ درصد) برای روشن‌تر شدن عکس و حفظ خوانایی ۱۰۰٪ کلمات */}
+        <div className="absolute inset-0 bg-gradient-to-t from-industrialBlack/80 via-industrialBlack/40 to-transparent" />
       </div>
 
-      {/* ۲. محتوای متنی مجهز به انیمیشن ورودی نرم از بالا به پایین (Fade-in Down) */}
+      {/* 📢 محتوای متنی و عنوان غول‌پیکر مجهز به انیمیشن فریمور موشن */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ type: 'spring', stiffness: 50, damping: 12, delay: 0.1 }}
-          className="max-w-3xl text-right flex flex-col items-start space-y-4"
-        >
+        <div className="max-w-3xl text-right flex flex-col items-start space-y-4">
           
-          {/* نشان کوچک و لوکس بالای عنوان */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-slate-300 backdrop-blur-md">
-            <Factory className="w-3.5 h-3.5 text-industrialGreen" />
-            <span>بیش از یک دهه اصالت و تخصص مهندسی در کشور</span>
-          </div>
+          {/* عنوان غول‌پیکر با فونت استعداد ۹۰۰ دقیقاً مشابه صفحه پروژه‌ها */}
+          <motion.h1 
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: 'spring', stiffness: 50, damping: 14 }}
+            className="font-estedad font-black text-4xl sm:text-5xl md:text-6xl text-white leading-tight tracking-tight"
+          >
+            درباره فابریکه ما
+          </motion.h1>
 
-          {/* عنوان اصلی غول‌پیکر با فونت استعداد ۹۰۰ (بدون بردکرامب) */}
-          <h1 className="font-estedad font-black text-3xl sm:text-4xl md:text-5xl text-white leading-tight tracking-tight">
-            درباره فابریکه <span className="text-industrialGreen">فراز صنعت</span>
-          </h1>
+          {/* توضیحات مینی‌مال و مسلکی درباره اصالت شرکت */}
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: 'spring', stiffness: 50, damping: 14, delay: 0.1 }}
+            className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed font-normal"
+          >
+            شناسنامه رسمی، اهداف استراتژیک، ارزش‌های پایدار و لست توانمندی‌های سخت‌افزاری شرکت تولیدی صنعتی هنگرسازی و لفت‌سازی فراز صنعت.
+          </motion.p>
 
-          {/* خط دکوراتیو سبز سازمانی زیر عنوان برای هدایت چشم */}
-          <div className="w-16 h-1 bg-industrialGreen rounded-full mt-1" />
+          {/* مسیر راهنمای مینی‌مال (ساده و بدون بردکرامب فانتزی) */}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="flex items-center gap-1.5 text-xs sm:text-sm text-slate-400 font-light pt-2"
+          >
+            <div className="flex items-center  gap-3 text-sm">
+              <Link
+                to="/"
+                className="text-gray-300 transition hover:text-white"
+              >
+                خانه
+              </Link>
+              <span>‹</span>
+              <span className="text-[#19a866]">در باره کارخانه</span>
+            </div>
+          </motion.div>
 
-        </motion.div>
+        </div>
       </div>
 
     </section>
