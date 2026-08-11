@@ -12,7 +12,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="w-full bg-industrialGray py-16 lg:py-24 select-none font-yekan border-b border-slate-200">
+    <section id="faq-section" className="w-full bg-industrialGray py-16 lg:py-24 select-none font-yekan border-b border-slate-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
         {/* عنوان بخش سوالات متداول */}
