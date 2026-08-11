@@ -71,7 +71,7 @@ const getBentoStyle = (index) => {
                 setActiveFilter(tab.id);
                 setVisibleCount(6);
               }}
-              className={`px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer focus:outline-none
+              className={`px-5 py-2 rounded-full text-xs sm:text-sm font-normal transition-all duration-300 cursor-pointer focus:outline-none
                 ${activeFilter === tab.id ? 'bg-industrialGreen text-white shadow-md' : 'bg-industrialGray text-slate-600 hover:bg-slate-200'}`}
             >
               {tab.label}
