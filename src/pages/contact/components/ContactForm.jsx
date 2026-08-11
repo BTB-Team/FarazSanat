@@ -3,7 +3,7 @@ import { Loader2, CheckCircle2, AlertCircle, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { z } from 'zod';
 
-const INITIAL_VALUES = { name: '', phone: '', message: '' };
+const INITIAL_VALUES = { name: '', phone: '', email: '', subject: '', message: '' };
 
 // حداقل فاصله زمانی مجاز بین دو تلاش برای ارسال فرم (ms) — طبق بند «کنترل زمان»
 // سند استانداردهای امنیتی، برای جلوگیری از کلیک‌های رگباری ربات/کاربر
@@ -28,6 +28,18 @@ const contactSchema = z.object({
     .trim()
     .min(1, 'شماره تماس الزامی است.')
     .regex(/^\d{9,14}$/, 'شماره تماس باید فقط عدد و بین ۹ تا ۱۴ رقم باشد.'),
+  email: z
+    .string()
+    .trim()
+    .min(1, 'ایمیل الزامی است.')
+    .max(100, 'ایمیل نباید بیشتر از ۱۰۰ کاراکتر باشد.')
+    .email('ایمیل معتبر وارد کنید.'),
+  subject: z
+    .string()
+    .trim()
+    .min(1, 'موضوع الزامی است.')
+    .max(100, 'موضوع نباید بیشتر از ۱۰۰ کاراکتر باشد.')
+    .refine(noHtmlTags, 'کاراکترهای غیرمجاز (< >) در موضوع استفاده نشود.'),
   message: z
     .string()
     .trim()
@@ -185,6 +197,53 @@ export default function ContactForm() {
             />
             {errors.phone && (
               <p id="phone-error" className="mt-1.5 text-sm text-red-600">{errors.phone}</p>
+            )}
+          </div>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-slate-600 mb-1.5">
+              ایمیل
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              maxLength={100}
+              className="form-input"
+              dir="ltr"
+              placeholder="you@example.com"
+              value={values.email}
+              onChange={handleChange}
+              disabled={isLoading}
+              aria-invalid={!!errors.email}
+              aria-describedby={errors.email ? 'email-error' : undefined}
+            />
+            {errors.email && (
+              <p id="email-error" className="mt-1.5 text-sm text-red-600">{errors.email}</p>
+            )}
+          </div>
+
+          <div>
+            <label htmlFor="subject" className="block text-sm font-medium text-slate-600 mb-1.5">
+              موضوع
+            </label>
+            <input
+              id="subject"
+              name="subject"
+              type="text"
+              maxLength={100}
+              className="form-input"
+              placeholder="موضوع پیام"
+              value={values.subject}
+              onChange={handleChange}
+              disabled={isLoading}
+              aria-invalid={!!errors.subject}
+              aria-describedby={errors.subject ? 'subject-error' : undefined}
+            />
+            {errors.subject && (
+              <p id="subject-error" className="mt-1.5 text-sm text-red-600">{errors.subject}</p>
             )}
           </div>
         </div>

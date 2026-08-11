@@ -1,11 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-// TODO: این iframe موقعیت کلی کابل را نشان می‌دهد (بدون نیاز به API key).
-// وقتی آدرس دقیق کارخانه مشخص شد، برای دقت بیشتر می‌توانید از گوگل مپس
-// (Share > Embed a map) لینک pb= واقعی را کپی کرده و جایگزین این src کنید.
-const MAP_EMBED_SRC =
-  'https://www.google.com/maps?q=Kabul,Afghanistan&output=embed';
+// TODO: این iframe بر اساس متن آدرس جستجو می‌شود (بدون نیاز به API key) —
+// دقیق‌تر از قبل (که فقط «کابل» بود)، اما هنوز کاملاً دقیق نیست چون گوگل این
+// آدرس متنی را حدس می‌زند، نه یک پین واقعی. برای پین ۱۰۰٪ دقیق روی محل واقعی
+// کارخانه: خودتان در Google Maps محل را پیدا کنید → Share → Embed a map →
+// لینک pb= را کپی کرده و جایگزین این src کنید.
+const ADDRESS = 'کابل، ناحیه صنعتی پل‌چرخی، ناحیه ۵، سرک کمپ';
+const MAP_EMBED_SRC = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS)}&output=embed`;
 
 export default function GoogleMap() {
   return (
