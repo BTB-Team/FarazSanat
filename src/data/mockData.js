@@ -147,4 +147,21 @@ export const mockLeadership = {
   message: "فابریکه هنگرسازی و فلزکاری فراز صنعت از سال ۱۳۹۲ با هدف سهم‌گیری فعال در توسعه زیربناهای صنعتی کشور و خودکفایی در بخش عمران سنگین آغاز به کار نمود. تعهد ما همواره بر این بوده است تا با تکیه بر دانش مهندسی مدرن، محاسبات دقیق تخنیکی و استفاده از ماشین‌آلات مجهز پیش‌ساخته، سازه‌هایی با بالاترین ضریب ایمنی و کیفیت عالی را به مشتریان محترم خویش تحویل دهیم. ما افق روشنِ آینده را در پارک صنعتی کوتل تخت زمین با اشتغال‌زایی وسیع برای جوانان و هموطنان عزیز و بومی‌سازی کامل این صنعت در کشور عزیز مان رقم خواهیم زد."
 };
 
+// دیتای جامع گالری تصاویر واقعی فابریکه فراز صنعت
+export const mockGallery = [
+  { id: "gal-1", category: "completed", title: "نمای مدرن سوله تحویل داده شده فراز صنعت", image: new URL('@/assets/images/hero-bg.jpg', import.meta.url).href },
+  { id: "gal-2", category: "factory", title: "صالون مسقف و مجهز ۱,۶۰۰ متری تولید اسکلت فلزی", image: new URL('../assets/images/hero-1.jpg', import.meta.url).href },
+  { id: "gal-3", category: "installation", title: "روند برپایی و نصب ستون‌های غول‌پیکر با کرین", image: new URL('../assets/images/Hero-2.jpg', import.meta.url).href }, // دقت به H بزرگ در نام فایل
+  { id: "gal-4", category: "completed", title: "اجرای پوشش سقف و عایق‌بندی مجهز هنگر", image: new URL('../assets/images/Hero-3.jpg', import.meta.url).href },
+  { id: "gal-5", category: "factory", title: "خط تولید و مونتاژ قطعات پیش‌ساخته در کارخانه", image: new URL('../assets/images/hero-4.jpg', import.meta.url).href },
+  { id: "gal-6", category: "installation", title: "ساخت اسکلت فلزی سنگین و مهندسی‌شده", image: new URL('../assets/images/hero-5.jpg', import.meta.url).href },
+  { id: "gal-7", category: "factory", title: "طراحی فضاکار داخلی سوله صنعتی", image: new URL('../assets/images/Hero.jpg', import.meta.url).href },
+  { id: "gal-8", category: "completed", title: "هنگر ذخیره‌سازی استراتژیک غلات و گندم", image: new URL('../assets/images/hero-bg-2.jpg', import.meta.url).href },
+  { id: "gal-9", category: "installation", title: "محاسبات فنی بارهای باد و زلزله در ساحه", image: new URL('../assets/images/hero-bg-3.jpg', import.meta.url).href },
+  { id: "gal-10", category: "installation", title: "محاسبات فنی بارهای باد و زلزله در ساحه", image: new URL('../assets/images/hero-bg-1.jpg', import.meta.url).href },
+  { id: "gal-11", category: "installation", title: "محاسبات فنی بارهای باد و زلزله در ساحه", image: new URL('../assets/images/hero.jpg', import.meta.url).href },
+  { id: "gal-12", category: "installation", title: "محاسبات فنی بارهای باد و زلزله در ساحه", image: new URL('../assets/images/hero-bg-4.jpg', import.meta.url).href },
+  { id: "gal-13", category: "installation", title: "محاسبات فنی بارهای باد و زلزله در ساحه", image: new URL('../assets/images/hero-bg-3.jpg', import.meta.url).href },
+];
+
 

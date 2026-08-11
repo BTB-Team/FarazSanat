@@ -1,15 +1,19 @@
-
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'path' // این ماژول نیتیو نود را ایمپورت کنید
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// https://vitejs.dev
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 export default defineConfig({
   plugins: [react()],
+
+  base: '/FarazSanat/',
+
   resolve: {
     alias: {
-      // کاراکتر @ را دقیقاً به پوشه src متصل می‌کند
       '@': path.resolve(__dirname, './src'),
     },
   },
-})
+});
