@@ -1,5 +1,3 @@
-import React from 'react';
-
 // این یک فایل نمونه برای راهنمایی اعضای تیم است تا استایل‌های مشترک را بشناسند
 export  function BaseElementsSample() {
   return (
