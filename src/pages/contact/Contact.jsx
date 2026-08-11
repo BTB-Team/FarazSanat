@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import ContactInfo from './components/ContactInfo';
 import ContactForm from './components/ContactForm';
