@@ -41,7 +41,7 @@ export default function Footer() {
 
             {/* نشان لایسنس رسمی دولت */}
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-slate-300">
-              <ShieldCheck className="w-4 h-4 text-industrialGreen" />
+              <ShieldCheck className="w-4 h-4 text-green-700" />
               <span>دارنده جواز رسمی نمبر D-54634 وزارت صنعت و تجارت</span>
             </div>
           </div>
@@ -53,16 +53,17 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-sm font-medium">
               {[
-                { name: 'صفحه اصلی سایت', path: '/' },
-                { name: 'پروسه و خدمات فنی', path: '/services' },
-                { name: 'کاتالوگ  پروژه‌ها', path: '/projects' },
-                { name: 'درباره ما و کارخانه', path: '/about' },
-                { name: 'ارتباط و دفاتر فروش', path: '/contact' }
+                { name: 'صفحه اصلی ', path: '/' },
+                { name: ' خدمات ما', path: '/services' },
+                { name: ' پروژه‌ها', path: '/projects' },
+                { name: 'درباره کارخانه', path: '/about' },
+                { name: 'تماس با ما', path: '/contact' },
+                { name: 'گالری', path: '/gallery' }
               ].map((link, idx) => (
                 <li key={idx}>
                   <Link 
                     to={link.path} 
-                    className="hover:text-industrialGreen text-slate-400 flex items-center gap-1 transition-colors duration-200 group"
+                    className="hover:text-green-700 text-slate-400 flex items-center gap-1 transition-colors duration-200 group"
                   >
                     <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-industrialGreen" />
                     <span>{link.name}</span>
@@ -80,7 +81,7 @@ export default function Footer() {
             <ul className="space-y-4 text-sm font-light text-slate-300">
               {/* آدرس */}
               <li className="flex items-start gap-3">
-                <div className="p-2 bg-white/5 rounded-lg border border-white/5 text-industrialGreen mt-0.5 shrink-0">
+                <div className="p-2 bg-white/5 rounded-lg border border-white/5 text-green-700 mt-0.5 shrink-0">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div className="flex flex-col">
@@ -90,22 +91,22 @@ export default function Footer() {
               </li>
               {/* تلفن */}
               <li className="flex items-start gap-3">
-                <div className="p-2 bg-white/5 rounded-lg border border-white/5 text-industrialGreen mt-0.5 shrink-0">
+                <div className="p-2 bg-white/5 rounded-lg border border-white/5 text-green-700 mt-0.5 shrink-0">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-semibold text-white text-xs">ارتباط مستقیم بخش مهندسی:</span>
-                  <a href="tel:+93799123456" className="text-slate-400 text-xs mt-0.5 hover:text-industrialGreen transition-colors tracking-wide" dir="ltr">+۹۳۷۹۹۸۵۹۵۵۷</a>
+                  <a href="tel:+93799123456" className="text-slate-400 text-xs mt-0.5 hover:text-green-700 transition-colors tracking-wide" dir="ltr">+۹۳۷۹۹۸۵۹۵۵۷</a>
                 </div>
               </li>
               {/* ایمیل */}
               <li className="flex items-start gap-3">
-                <div className="p-2 bg-white/5 rounded-lg border border-white/5 text-industrialGreen mt-0.5 shrink-0">
+                <div className="p-2 bg-white/5 rounded-lg border border-white/5 text-green-700 mt-0.5 shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-semibold text-white text-xs">مکاتبات اداری و رسمی:</span>
-                  <a href="mailto:info@farazsanat.com" className="text-slate-400 text-xs mt-0.5 hover:text-industrialGreen transition-colors tracking-wide">Abbasax19@gmail.com</a>
+                  <a href="mailto:info@farazsanat.com" className="text-slate-400 text-xs mt-0.5 hover:text-green-700 transition-colors tracking-wide">Abbasax19@gmail.com</a>
                 </div>
               </li>
             </ul>
