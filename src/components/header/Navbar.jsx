@@ -12,6 +12,7 @@ export default function Navbar() {
     { title: 'پروژه‌ها', path: '/projects' },
     { title: 'درباره کارخانه', path: '/about' },
     { title: 'گالری', path: '/gallery' },
+    { title: 'سوالات متداول', path: '/?to=faq-section' }
   ];
 
   return (
@@ -41,23 +42,38 @@ export default function Navbar() {
         {/* ۲. منوهای ناوبری (تغییر رنگ متون به سیاه صنعتی برای خوانایی روی سفید) */}
         <nav className="hidden lg:block">
           <ul className="flex items-center space-x-8 space-x-reverse text-sm font-medium text-slate-600">
-            {menuItems.map((item, index) => (
+
+          {menuItems.map((item, index) => {
+            const isFaqLink = item.path.includes('?to=faq-section');
+          
+            return (
               <li key={index}>
                 <NavLink 
                   to={item.path} 
+                  // مدیریت کلیک در صورتی که کاربر از قبل درون خود صفحه اصلی باشد
+                  onClick={(e) => {
+                    if (isFaqLink && (window.location.hash === '#/' || window.location.hash.includes('?to=faq-section'))) {
+                      e.preventDefault();
+                      const element = document.getElementById('faq-section');
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }
+                  }}
                   className={({ isActive }) => `
-                    relative py-2 transition-colors duration-300 block group
-                    ${isActive ? 'text-industrialGreen font-bold' : 'hover:text-industrialGreen'}
+                    relative py-2 transition-colors duration-300 block group cursor-pointer
+                    ${(isActive && !isFaqLink) ? 'text-industrialGreen font-bold' : 'hover:text-industrialGreen'}
                   `}
                 >
                   {item.title}
-                  {/* خط متحرک زیر منو با رنگ سبز سازمانی */}
                   <span className="absolute bottom-0 right-0 w-0 h-0.5 bg-industrialGreen transition-all duration-300 group-hover:w-full"></span>
                 </NavLink>
               </li>
-            ))}
+            );
+          })}
           </ul>
         </nav>
+
 
         {/* ۳. دکمه‌های دسکتاپ و دکمه همبرگری موبایل */}
         <div className="flex items-center gap-4">

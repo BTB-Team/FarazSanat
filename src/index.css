@@ -23,6 +23,10 @@
 }
 
 @layer base {
+    
+  html {
+    scroll-behavior: smooth; /* 🛑 فعال‌سازی انیمیشن نرم اسکرول در کل وب‌سایت */
+  }
   /* تنظیم فونت بدنه به صورت پیش‌فرض برای کل سایت */
   body {
     @apply font-yekan bg-industrialGray text-slate-700 antialiased;
