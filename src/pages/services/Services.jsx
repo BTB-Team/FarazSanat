@@ -1,10 +1,22 @@
-import React from 'react';
+import CTASection from "@/components/services/CTASection";
+import FAQSection from "@/components/services/FAQSection";
+import HeroSection from "@/components/services/HeroSection";
+import IntroSection from "@/components/services/IntroSection";
+import ProcessSection from "@/components/services/ProcessSection";
+import ServicesGrid from "@/components/services/ServicesGrid";
+import WhyChooseUs from "@/components/services/WhyChooseUs";
+
 
 export default function Services() {
   return (
-    <div className="page-container">
-      <h1 className="text-2xl md:text-3xl font-bold mb-4">خدمات ما</h1>
-      <p className="text-base text-slate-600">طراحی مهندسی، تولید قطعات در کارخانه و نصب سازه‌های فلزی سنگین.</p>
-    </div>
+    <>
+      <HeroSection/>
+      <IntroSection/>
+      <ServicesGrid/>
+      <ProcessSection/>
+      <WhyChooseUs/>
+      {/* <FAQSection/> */}
+      <CTASection/>
+    </>
   );
 }
