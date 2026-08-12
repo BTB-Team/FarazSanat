@@ -11,6 +11,9 @@ const Projects = lazy(() => import('@/pages/portfolio/Portfolio'));
 const ProjectDetail = lazy(() => import('@/pages/portfolio/ProjectDetail'));
 const MediaGallery = lazy(()=> import('@/pages/gallery/MediaGallery'));
 const Contact = lazy(() => import('@/pages/contact/Contact'));
+const ServiceDetail = lazy(
+  () => import("@/pages/services/ServiceDetail")
+);
 
 // اتاق انتظار یا انیمیشن لودینگ صنعتی
 const PageLoading = () => (
@@ -28,6 +31,7 @@ export default function App() {
           <Route path="/" element={<Home />} /> {/* 👈 حتماً باید داخل تگ باشد */}
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:id" element={<ServiceDetail />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/gallery" element={<MediaGallery/>} />
